@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <title>LGMVIP_WL_WEB_JUNE_2022</title>
+</head>
+
+<body>
+    <h1>Student Enrollment System</h1>
+    <div class="container centre">
+        <table>
+            <tr>
+                <td>
+                    <form class="input-part" autocomplete="off" onsubmit="onFormSubmit()">
+                        <div>
+                            <label for="studentName">Student Name</label>
+                            <input type="text" placeholder="Enter Student Name" name="studentName" id="studentName"
+                                required>
+                        </div>
+                        <div>
+                            <label for="collegeName">College Name</label>
+                            <input placeholder="Enter College Name" type="text" name="collegeName" id="collegeName"
+                                required>
+                        </div>
+                        <div>
+                            <label for="Email">Email</label>
+                            <input placeholder="Enter The Email" type="email" name="Email" id="Email" required>
+                        </div>
+                        <div>
+                            <label for="Gender">Gender</label><br>
+                            <input type="radio" name="gender" value="Male" id="Gender"> Male<br>
+                            <input type="radio" name="gender" value="Female" id="Gender"> Female<br>
+                            <input type="radio" name="gender" value="Others" id="Gender"> Others
+                        </div>
+                        <div>
+                            <label for="Skills">Skills</label>
+                            <input placeholder="Skills" type="text" name="Skills" id="Skills" required>
+                        </div>
+                        <div class="form-btns">
+                            <input type="submit" value="Submit">
+                            <input type="reset" value="Reset">
+                        </div>
+                    </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Student Name</th>
+                                <th>College Name</th>
+                                <th>Email</th>
+                                <th>Gender</th>
+                                <th>Skills</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+                </td>
+            </tr>
+        </table>
+        <script src="student.js" defer> </script>
+
+    </div>
+</body>
+
+</html>
