@@ -15,7 +15,9 @@ function readFormData() {
   var formData = {};
   formData["studentName"] = document.getElementById("studentName").value;
   formData["collegeName"] = document.getElementById("collegeName").value;
+  formData["address"] = document.getElementById("address").value;
   formData["Email"] = document.getElementById("Email").value;
+  formData["PhoneNo"] = document.getElementById("PhoneNo").value;
   formData["Gender"] = document.getElementById("Gender").value;
   formData["Skills"] = document.getElementById("Skills").value;
 
@@ -32,12 +34,16 @@ function insertNewRecord(data) {
   cell2 = newRow.insertCell(1);
   cell2.innerHTML = data.collegeName;
   cell3 = newRow.insertCell(2);
+  cell3.innerHTML = data.address;
+  cell3 = newRow.insertCell(3);
   cell3.innerHTML = data.Email;
-  cell4 = newRow.insertCell(3);
+  cell3 = newRow.insertCell(4);
+  cell3.innerHTML = data.PhoneNo;
+  cell4 = newRow.insertCell(5);
   cell4.innerHTML = data.Gender;
-  cell5 = newRow.insertCell(4);
+  cell5 = newRow.insertCell(6);
   cell5.innerHTML = data.Skills;
-  cell5 = newRow.insertCell(5);
+  cell5 = newRow.insertCell(7);
   cell5.innerHTML = `<button onClick="onEdit(this)"><i class="uil uil-edit"></i></button> <button onClick="onDelete(this)"><i class="uil uil-times-circle"></i></button>`;
 }
 
@@ -45,16 +51,20 @@ function onEdit(td) {
   selectedRow = td.parentElement.parentElement;
   document.getElementById("studentName").value = selectedRow.cells[0].innerHTML;
   document.getElementById("collegeName").value = selectedRow.cells[1].innerHTML;
-  document.getElementById("Email").value = selectedRow.cells[2].innerHTML;
-  document.getElementById("Gender").value = selectedRow.cells[3].innerHTML;
-  document.getElementById("Skills").value = selectedRow.cells[4].innerHTML;
+  document.getElementById("address").value = selectedRow.cells[2].innerHTML;
+  document.getElementById("Email").value = selectedRow.cells[3].innerHTML;
+  document.getElementById("PhoneNo").value = selectedRow.cells[4].innerHTML;
+  document.getElementById("Gender").value = selectedRow.cells[5].innerHTML;
+  document.getElementById("Skills").value = selectedRow.cells[6].innerHTML;
 }
 function updateRecord(formData) {
   selectedRow.cells[0].innerHTML = formData.studentName;
   selectedRow.cells[1].innerHTML = formData.collegeName;
-  selectedRow.cells[2].innerHTML = formData.Email;
-  selectedRow.cells[3].innerHTML = formData.Gender;
-  selectedRow.cells[4].innerHTML = formData.Skills;
+  selectedRow.cells[2].innerHTML = formData.address;
+  selectedRow.cells[3].innerHTML = formData.Email;
+  selectedRow.cells[4].innerHTML = formData.PhoneNo;
+  selectedRow.cells[5].innerHTML = formData.Gender;
+  selectedRow.cells[6].innerHTML = formData.Skills;
 }
 
 function onDelete(td) {
@@ -68,7 +78,9 @@ function onDelete(td) {
 function resetForm() {
   document.getElementById("studentName").value = "";
   document.getElementById("collegeName").value = "";
+  document.getElementById("address").value = "";
   document.getElementById("Email").value = "";
+  document.getElementById("PhoneNo").value = "";
   document.getElementById("Gender").value = "";
   document.getElementById("Skills").value = "";
 
