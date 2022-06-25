@@ -1,9 +1,6 @@
 body {
   background-color: #140a5b;
   background-image: linear-gradient(69deg, #2c6cb5 40%, #88b5e1 60%);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
 }
 h1 {
   text-align: center;
@@ -54,7 +51,9 @@ table.list thread > tr {
 
 input[type="text"],
 [type="email"],
-[type="number"] {
+[type="number"],
+[type="gender"] {
+  font-family: poppins; 
   width: 95%;
   padding: 10px 10px;
   margin: 0px 0 10px 0;

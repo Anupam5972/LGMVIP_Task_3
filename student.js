@@ -44,7 +44,7 @@ function insertNewRecord(data) {
   cell5 = newRow.insertCell(6);
   cell5.innerHTML = data.Skills;
   cell5 = newRow.insertCell(7);
-  cell5.innerHTML = `<button onClick="onEdit(this)"><i class="uil uil-edit"></i></button> <button onClick="onDelete(this)"><i class="uil uil-times-circle"></i></button>`;
+  cell5.innerHTML = `<button onClick="onEdit(this)"><i class="uil uil-edit"> Edit</i></button> <button onClick="onDelete(this)"><i class="uil uil-times-circle"> Delete</i></button>`;
 }
 
 function onEdit(td) {

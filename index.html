@@ -29,8 +29,7 @@
                         </div>
                         <div>
                             <label for="address">Address</label>
-                            <input placeholder="Enter your Address" type="text" name="address" id="address"
-                                required>
+                            <input placeholder="Enter your Address" type="text" name="address" id="address" required>
                         </div>
                         <div>
                             <label for="Email">Email</label>
@@ -38,13 +37,16 @@
                         </div>
                         <div>
                             <label for="Phone No.">Phone No.</label>
-                            <input placeholder="Enter your Phone No." type="number" name="PhoneNo" id="PhoneNo" required>
+                            <input placeholder="Enter your Phone No." type="number" name="PhoneNo" id="PhoneNo"
+                                required>
                         </div>
                         <div>
-                            <label for="Gender">Gender</label><br>
-                            <input type="radio" name="gender" value="Male" id="Gender"> Male
-                            <input type="radio" name="gender" value="Female" id="Gender"> Female
-                            <input type="radio" name="gender" value="Others" id="Gender"> Others
+                            <label for="Gender">Gender</label>
+                            <select name="gender" id="Gender" type = "gender">
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Others">Others</option>
+                            </select>
                         </div>
                         <div>
                             <label for="Skills">Skills</label>
@@ -55,7 +57,6 @@
                             <input type="reset" value="Reset">
                         </div>
                     </form>
-
                 <td>
                     <table class="list" id="storeList">
                         <thead>
@@ -67,6 +68,7 @@
                                 <th>Phone No</th>
                                 <th>Gender</th>
                                 <th>Skills</th>
+                                <th>Configure</th>
                             </tr>
                         </thead>
                         <tbody>
